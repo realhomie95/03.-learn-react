@@ -6,8 +6,8 @@ const Card = () => {
   return (
     <div className="Card">
       <img
-        src="https://designcompass.org/wp-content/uploads/2024/10/logo-naver.png"
-        alt="네이버"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKa5cdWHNyrUcRMZ3tayQOtvUme9kH2RVYhA&s"
+        alt="젠이츠"
         width={200}
       />
       <h2>네이버 카드</h2>

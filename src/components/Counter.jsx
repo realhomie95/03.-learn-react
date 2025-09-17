@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Counter = ({ number = 5, onIncreaseClick }) => {
+const Counter = ({ number = 1, onIncreaseClick }) => {
   // logic : 상태 관리
   // let count = 0;
   // state : 리액트 컴포넌트에서 상태(state)는 컴포넌트의 데이터나 정보를 저장하고 관리하는 객체입니다.

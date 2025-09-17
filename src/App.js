@@ -1,34 +1,30 @@
 // React 기본 구조 명령어 : rafce
 // js와 jsx는 부모 자식 관계가 있어야 합니다. (최상위 태그 1개)
-import Card from "./components/Card";
-import Counter from "./components/Counter";
-import Greeting from "./components/Greeting";
-import Logical from "./components/Logical";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   // logic
-  const handleIncrease = () => {
-    console.log("💘 더하기 버튼 클릭!!");
-  };
+  // Home, About, Contact 페이지
 
   // view
   return (
-    <div className="App">
-      후츠릿
-      <Logical />
-      <Greeting username="카마도" />
-      <Greeting username="아가츠마" />
-      <Greeting username="토미오카" />
-      <Card />
-      <Counter onIncreaseClick={handleIncrease} />
-      {/* 숫자가 5씩 증가하는 카운터 만들기 */}
-      <Counter number={5} onIncreaseClick={handleIncrease} />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
 
+// 변수명 작성법 (Naming Conventions)
 // camelCase : 낙타등 표기법, 여러 단어로 이루어진 이름을 작성할 때 각 단어의 첫 글자를 대문자로 표기하는 방식입니다. 예를 들어, myVariableName, userProfileData 등이 있습니다.
 // PascalCase : 파스칼 표기법, 각 단어의 첫 글자를 대문자로 표기하는 방식입니다. 예를 들어, MyVariableName, UserProfileData 등이 있습니다. 주로 클래스나 컴포넌트 이름에 사용됩니다.
 // kebab-case : 케밥 표기법, 단어 사이를 하이픈(-)으로 연결하는 방식입니다. 예를 들어, my-variable-name, user-profile-data 등이 있습니다. 주로 CSS 클래스 이름이나 파일 이름에 사용됩니다.

@@ -1,15 +1,28 @@
 // React 기본 구조 명령어 : rafce
+// js와 jsx는 부모 자식 관계가 있어야 합니다. (최상위 태그 1개)
 import Card from "./components/Card";
 import Counter from "./components/Counter";
 import Greeting from "./components/Greeting";
+import Logical from "./components/Logical";
 
 function App() {
+  // logic
+  const handleIncrease = () => {
+    console.log("💘 더하기 버튼 클릭!!");
+  };
+
+  // view
   return (
     <div className="App">
       후츠릿
-      <Greeting />
+      <Logical />
+      <Greeting username="카마도" />
+      <Greeting username="아가츠마" />
+      <Greeting username="토미오카" />
       <Card />
-      <Counter />
+      <Counter onIncreaseClick={handleIncrease} />
+      {/* 숫자가 5씩 증가하는 카운터 만들기 */}
+      <Counter number={5} onIncreaseClick={handleIncrease} />
     </div>
   );
 }

@@ -3,10 +3,10 @@
 
 import React from "react";
 
-const Greeting = () => {
+const Greeting = ({ username }) => {
   return (
     <div className="Greeting">
-      <h1>안녕하세요, JM입니다!</h1>
+      <h1>안녕하세요, {username}입니다</h1>
       <p>리액트 컴포넌트 예제입니다.</p>
       <p>-------------</p>
     </div>

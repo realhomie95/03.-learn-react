@@ -1,4 +1,6 @@
+// React 기본 구조 명령어 : rafce
 import Card from "./components/Card";
+import Counter from "./components/Counter";
 import Greeting from "./components/Greeting";
 
 function App() {
@@ -6,11 +8,15 @@ function App() {
     <div className="App">
       후츠릿
       <Greeting />
-      {/* <Greeting />
-      <Greeting /> */}
       <Card />
+      <Counter />
     </div>
   );
 }
 
 export default App;
+
+// camelCase : 낙타등 표기법, 여러 단어로 이루어진 이름을 작성할 때 각 단어의 첫 글자를 대문자로 표기하는 방식입니다. 예를 들어, myVariableName, userProfileData 등이 있습니다.
+// PascalCase : 파스칼 표기법, 각 단어의 첫 글자를 대문자로 표기하는 방식입니다. 예를 들어, MyVariableName, UserProfileData 등이 있습니다. 주로 클래스나 컴포넌트 이름에 사용됩니다.
+// kebab-case : 케밥 표기법, 단어 사이를 하이픈(-)으로 연결하는 방식입니다. 예를 들어, my-variable-name, user-profile-data 등이 있습니다. 주로 CSS 클래스 이름이나 파일 이름에 사용됩니다.
+// snake_case : 스네이크 표기법, 단어 사이를 밑줄(_)로 연결하는 방식입니다. 예를 들어, my_variable_name, user_profile_data 등이 있습니다. 주로 데이터베이스 필드 이름이나 일부 프로그래밍 언어에서 사용됩니다.
